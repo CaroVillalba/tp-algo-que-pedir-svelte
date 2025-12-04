@@ -1,58 +1,48 @@
-🎨 Maquetado HTML/CSS → Migración a Svelte
-📌 Descripción
+# 🎨 Maquetado HTML/CSS → Migración a Svelte
 
-Este proyecto comenzó como un maquetado estático utilizando HTML y CSS, enfocado en aplicar buenas prácticas de diseño web, estructura semántica y estilos responsivos.
-Luego, el proyecto fue migrado a Svelte, con el objetivo de incorporar componentes reutilizables, mejorar la performance y sentar las bases de una aplicación dinámica.
+## 📌 Descripción
+Este proyecto comenzó como un **maquetado estático** utilizando **HTML y CSS**, enfocado en aplicar buenas prácticas de diseño web, estructura semántica y estilos responsivos.  
+Luego, el proyecto fue **migrado a Svelte**, con el objetivo de incorporar componentes reutilizables, mejorar la performance y sentar las bases de una aplicación dinámica.
 
-🎯 Objetivos del Proyecto
+---
 
-Practicar maquetado web utilizando HTML semántico y CSS.
+## 🎯 Objetivos del Proyecto
+- Practicar maquetado web utilizando HTML semántico y CSS.
+- Implementar un diseño responsive adaptable a distintos dispositivos.
+- Migrar la UI hacia componentes Svelte.
+- Mejorar la estructura del código, modularidad y escalabilidad.
 
-Implementar un diseño responsive adaptable a distintos dispositivos.
+---
 
-Migrar la UI hacia componentes Svelte.
+## 🛠️ Tecnologías Utilizadas
 
-Mejorar la estructura del código, modularidad y escalabilidad.
+### 🖌️ Maquetado
+- **HTML5**
+- **CSS3**
+- Flexbox / Grid
 
-🛠️ Tecnologías Utilizadas
-🖌️ Maquetado
+### ⚙️ Framework
+- **Svelte**
+- **Node.js** (entorno)
+- **Vite** (bundler)
 
-HTML5
-
-CSS3
-
-Flexbox / Grid
-
-⚙️ Framework
-
-Svelte
-
-Node.js (para entorno de desarrollo)
-
-Vite (bundler)
-
-🖼️ Diseño y Responsividad
+## 🖼️ Diseño y Responsividad
 
 El maquetado fue diseñado priorizando:
 
-Estructura clara y semántica
+- Estructura clara y semántica  
+- Layout adaptable con **Flexbox** y **CSS Grid**  
+- Enfoque **Mobile First**  
+- Variables CSS para escalabilidad  
+- Componentes reutilizables al migrar a **Svelte**  
 
-Layout adaptable con Flexbox y Grid
+---
 
-Mobile First
-
-Variables CSS para escalabilidad
-
-Componentes reutilizables al pasar a Svelte
-
-📚 Aprendizajes
+## 📚 Aprendizajes
 
 Este proyecto me permitió:
 
-Aplicar buenas prácticas de maquetado.
-
-Migrar una UI estática hacia un framework moderno.
-
-Trabajar con componentes, props y reactividad en Svelte.
-
-Comprender el flujo de trabajo de prototipo → desarrollo.
+- Aplicar buenas prácticas de maquetado HTML/CSS  
+- Migrar una UI estática hacia un framework moderno  
+- Trabajar con componentes, props y reactividad en **Svelte**  
+- Comprender el flujo completo desde prototipo → desarrollo  
