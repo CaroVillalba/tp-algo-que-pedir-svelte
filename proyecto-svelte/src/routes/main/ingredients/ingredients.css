@@ -1,0 +1,7 @@
+.title-buttons-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 0rem 0rem 1rem 0rem;
+}

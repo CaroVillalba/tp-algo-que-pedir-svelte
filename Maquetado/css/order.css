@@ -1,0 +1,241 @@
+.content {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+    padding-top: 0.5rem;
+}
+
+.order-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.order-user {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: clamp(0rem, 1vw, 1rem);
+    color: var(--color-label);
+}
+
+.order-avatar {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.order-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-name {
+    font-weight: 450;
+    font-size: 1rem;
+}
+
+.order-username {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    
+}
+
+p{
+    margin: 0; /*Arreglo necesario por cambio de la semántica*/
+}
+
+.order-location {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+    color: var(--color-label);
+    padding: 1rem 0 1rem 0; /*Cambie margin por padding*/
+}
+
+.order-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.order-location-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.order-location-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-address {
+    font-weight: 450;
+    font-size: 1rem;
+}
+
+.order-payment {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+.credit-card-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    align-self: flex-start;
+}
+
+.order-payment-info {
+    align-self: center;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    column-gap: clamp(0.1rem, 0.5rem, 0.5rem);
+    row-gap: 1.5rem;
+}
+
+.pedido-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    border: 0.05rem solid var(--color-border);
+}
+
+/*Retoques especificos para la página de pedidos:*/
+
+h2 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+nav a.activePedidos {
+    color: var(--color-primary);
+    
+    padding-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+nav.pedidos {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    float: right;
+    width: 100%;
+    padding: 0 0 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+i{
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+}
+
+
+footer {
+    display: none;
+}
+
+@media screen and (max-width: 768px) and (min-width: 401px) {
+    .pedido-card {
+        max-width: 100%; /*Con esta medida consigo el tamaño que busco de las cards*/
+    }
+
+    nav.pedidos {
+        gap: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-rows: auto;
+        column-gap: clamp(0rem, 0.5rem, 0.5rem);
+        row-gap: 1.5rem;
+    }
+
+    .primary-button{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    
+    body {
+        padding: 0.5rem 1rem;
+        font-size: clamp(0.55rem, 3vw, 1rem);
+    }
+
+    .content {
+        padding: 0.5rem;
+        padding-bottom: 3.5rem;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    nav.pedidos {
+        font-size: 0.7rem;
+        justify-content: space-between;
+        gap: clamp(0.2rem, 2vw, 1rem);
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        row-gap: 1.5rem;
+    }
+    
+    .primary-button {
+        width: 100%;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        width: 100%;
+        padding: 0.5rem 0;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-container);
+        color: var(--color-primary);
+        bottom: 0;
+        left: 0;
+        font-size: clamp(0.6rem, 3vw, 1rem);
+        position: fixed;
+        z-index: 10;
+    }
+
+    .footer-menu {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .footer-menu a {
+        min-width: 0;
+        flex: 1;
+        text-align: center;
+    }
+
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="ph ph-chef-hat"></i>
+            <span>Algo que Pedir</span>
+        </div>
+        <nav>
+            <a href="../pages/order.html" class="menu-item-inactive">Pedidos</a>
+            <a href="../pages/menu.html" class="menu-item-inactive">Menú</a>
+            <a href="../pages/ingredients.html" class="menu-item-inactive">Ingredientes</a>
+            <a href="#top" class="active">Cuenta</a>
+            <a href="#" class="expandable-menu-button"><i class="ph ph-list"></i></a>
+        </nav>
+        <div class="user-profile">
+            <img src="../images/foto-perfil.jpeg" alt="Perfil">
+        </div>
+    </header>
+
+    <main class="content">
+        <h1>Información del local</h1>
+        <form>
+            <section class="section">
+                <div class="form-row">
+                    <div class="form-group">
+                        <span for="local-name">Nombre del local*</span>
+                        <input type="text" maxlength="30" id="local-name" name="local-name" placeholder="Escribir" required>
+                    </div>
+                    <div class="form-group">
+                        <span for="image-url">URL de la imagen*</span>
+                        <input type="text" id="image-url" name="image-url" placeholder="Escribir" required>
+                    </div>
+                    <div class="image-preview">
+                        <img src="../images/foto-local.jpg" alt="Vista previa de la imagen">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Dirección</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <span for="direction">Dirección*</span>
+                        <input type="text" maxlength="30" id="direction" name="direction" placeholder="Escribir" required>
+                    </div>
+                    <div class="form-group">
+                        <span for="height">Altura*</span>
+                        <input type="number" min="0" id="height" name="height" placeholder="Escribir" required>
+                    </div>
+                    <div class="form-group">
+                        <span for="latitud">Latitud*</span>
+                        <input type="number" id="latitud" name="latitud" placeholder="Escribir" required>
+                    </div>
+                    <div class="form-group">
+                        <span for="length">Longitud*</span>
+                        <input type="number" id="length" name="length" placeholder="Escribir" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Porcentajes</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <span for="comision-app">Porcentaje de comisión con la app*</span>
+                        <input type="number" min="0" inputmode="decimal" id="comision-app" name="comision-app" placeholder="Escribir" required>
+                    </div>
+                    <div class="form-group">
+                        <span for="comision-author">Porcentaje de comisión con autores de platos*</span>
+                        <input type="number" min="0" inputmode="decimal" id="comision-author" name="comision-author" placeholder="Escribir" required>
+                    </div>
+                </div>
+                <h2>Métodos de pago</h2>
+                <div class="checkbox-group">
+                    <span><input type="checkbox" name="payment-method" value="efectivo">Efectivo</span>
+                    <span><input type="checkbox" name="payment-method" value="qr">QR</span>
+                    <span><input type="checkbox" name="payment-method" value="transferencia">Transferencia</span>
+                </div>
+            </section>
+
+            <div class="button-group">
+                <button type="submit" class="primary-button">Guardar cambios</button>
+                <button type="reset" class="secondary-button">Descartar cambios</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="below-header">
+        <nav class="below-header-items">
+            <a href="#"><i class="ph ph-cooking-pot below-header-items-first"></i></a>
+            <a href="../pages/order.html"><i class="ph ph-shopping-cart"></i></a>
+            <a href="../pages/menu.html"><i class="ph ph-fork-knife"></i></a>
+            <a href="../pages/ingredients.html"><i class="ph ph-bowl-food"></i></a>
+            <a href="../pages/account.html"><i class="ph ph-user"></i></a>
+        </nav>
+    </footer>
+</body>
+</html>

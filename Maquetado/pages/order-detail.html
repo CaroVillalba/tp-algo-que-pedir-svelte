@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/order-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+    <title>detalle_pedido</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="ph ph-chef-hat"></i>
+            <span>Algo que Pedir</span>
+        </div>
+        <nav>
+            <a href="../pages/order.html" class="menu-item-inactive">Pedidos</a>
+            <a href="../pages/menu.html" class="menu-item-inactive">Menú</a>
+            <a href="../pages/ingredients.html" class="menu-item-inactive">Ingredientes</a>
+            <a href="#top" class="active">Cuenta</a>
+            <a href="#" class="expandable-menu-button"><i class="ph ph-list"></i></a>
+        </nav>
+        <div class="user-profile">
+            <img src="../images/foto-perfil.jpeg" alt="Perfil">
+        </div>
+    </header>
+    <main class="container-width">
+        <section class="order">
+            <h1>Pedido #12345</h1>
+            <div class="group">
+                <span class="responsive-state">Estado del Pedido</span>
+                <span class="pending">Pendiente</span>
+            </div>
+        </section>
+        <section class="container-wrapper">
+            <section class="container-table">
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th class="container-order-title responsive-head">Cliente</th>
+                            <th class="container-order-title">Direccion entrega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="responsive-head" data-label="Cliente">
+                                <div class="plate-detail">
+                                    <img class="icon-item icon-client" src="../images/foto-perfil-Pedidos.jpeg" alt="tarjeta de credito">
+                                    <div>
+                                        <span>Sofía Miller</span><br>
+                                        <span class="description responsive-description">usuario smiller2005</span>
+                                    </div>
+                                </div>    
+                            </td>
+                            <td data-label="Direccion entrega">
+                                <div class="plate-detail">
+                                    <i class="ph ph-map-pin-line" style="font-size: 2rem;"></i>
+                                    <div class="client-information">
+                                        <span>Av siempre viva555</span><br>
+                                        <span class="description responsive-description">Lat: 40.7128, Long: -74.0060</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </section>
+            <section class="container-table">
+                    <h3>Resumen del Pedido</h3>
+                <section class="container-order-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="container-order-title column">Plato</th>
+                                <th class="container-order-title column1 theader">Cant.</th>
+                                <th class="container-order-title column1">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plate-detail">
+                                    <img  class="icon-item"  src="../images/Hamburguesa-plato.png" alt="icon">
+                                    <div>
+                                        <span class="responsive-text">Hamburguesa con Queso</span>
+                                        <span class="description">Hamburguesa clásica con queso y papas fritas</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number">1</span>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number">$12.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="plate-detail">
+                                    <img  class="icon-item"  src="../images/papas-fritas.png" alt="icon">
+                                    <div>
+                                        <span class="responsive-text">Papas fritas</span>
+                                        <span class="description">Tradicioanles papas fritas crocantes</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number ">1</span>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number">$5.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="plate-detail">
+                                    <img  class="icon-item"  src="../images/jugo-fruta.png" alt="icon">
+                                    <div>
+                                        <span class="responsive-text">Refresco</span>
+                                        <span class="description">Jugo natural de fruta</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number ">1</span>
+                                </td>
+                                <td>
+                                    <span class="responsive-description cant-number">$3.00</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+            <section class="container-table">
+                <h3 class="container-order-title">Pago</h3>
+                <div class="pay">
+                    <span>Subtotal</span>
+                    <span>$20.00</span>
+                </div>
+                <div class="pay">
+                    <span>Comisión del delivery</span>
+                    <span>$2.00</span>
+                </div>
+                <div class="pay">
+                    <span>Incremento por tipo de pago</span>
+                    <span>$1.10</span>
+                </div>
+                <div class="pay">
+                    <span>Total</span>
+                    <span>$23.10</span>
+                </div>
+                <div class="pay-method">
+                    <h3>Método de Pago</h3>
+                    <div class="method">
+                        <i class="ph ph-credit-card" style="font-size: 2rem;"></i>
+                        <span>Pago con tarjeta de crédito</span>
+                    </div>
+                </div>
+            </section>
+            <div class="container-button">
+                <button class="primary-button">Volver</button>
+            </div>
+        </section>
+    </main>
+    <footer class="below-header">
+        <nav class="below-header-items">
+            <a href="#"><i class="ph ph-cooking-pot below-header-items-first"></i></a>
+            <a href="../pages/order.html"><i class="ph ph-shopping-cart"></i></a>
+            <a href="../pages/menu.html"><i class="ph ph-fork-knife"></i></a>
+            <a href="../pages/ingredients.html"><i class="ph ph-bowl-food"></i></a>
+            <a href="../pages/account.html"><i class="ph ph-user"></i></a>
+        </nav>
+    </footer>
+</body>
+</html>

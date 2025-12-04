@@ -1,0 +1,229 @@
+.order{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1.5rem 0 1.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+h1 {
+    padding: 0;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    gap: 1rem;
+}
+.container-table h3{
+    margin: 0;
+}
+.cant-number {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.pending{
+    background-image: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+    color: var(--color-container);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0.2rem 0.4rem var(--shadow-hover);
+} 
+
+.container-table{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-container);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.container-order-title{
+    text-align: left;
+}
+
+.contenedor-table table{
+    text-align: left;
+}
+.table td{
+    vertical-align: middle;
+}
+.pay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.container-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.method{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--color-label);
+    gap: 0.5rem;
+}
+
+.column{
+    width: 60%;
+    border-bottom: 1px solid var(--color-border-lighter);
+    padding: 0.3rem;
+    border-collapse: separate;
+}
+
+.column1{
+    border-bottom: 1px solid var(--color-border-lighter);
+    border-collapse: separate;
+    text-align: center;
+}
+
+.container-order-table{
+    border: 1px solid var(--color-border-lighter);
+    border-radius: 0.7rem;
+    border-collapse: separate;
+    overflow: hidden;
+}
+
+.container-order-table table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.container-order-table tbody tr td {
+    border-bottom: 1px solid var(--color-border-lightest);
+    vertical-align: auto;
+}
+
+.container-order-table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.plate-detail{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color : var(--color-description);
+}
+
+@media (max-width: 400px){
+    .order{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: flex-start;
+    }
+
+    .group{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .pending{
+        padding: 0.5rem;
+    }
+
+    .icon-item{
+        display: none;
+    }
+
+    .icon-client {
+        width: 2.5rem;
+        height: 1.875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .icon-client img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .responsive-table {
+    display: block;
+    }
+
+    .responsive-table thead {
+        display: none; /* Oculta los headers */
+    }
+
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-table td {
+        box-sizing: border-box;
+        text-align: left;
+        padding: 0.8rem;
+    }
+
+    /* Agrega un título antes de cada td */
+    .responsive-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        padding: 0.1rem;
+    }
+    .description{
+        display: none;
+    }
+    
+    .responsive-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color : var(--color-description);
+        font-size: 0.9rem;
+    }
+
+    .container-button{
+        padding: 0.1rem 0.3rem 1.5rem 0;
+    }
+}
+
+@media (max-width: 768px){
+
+    .order{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

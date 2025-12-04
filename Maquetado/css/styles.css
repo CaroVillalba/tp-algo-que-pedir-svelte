@@ -1,0 +1,656 @@
+/* Estilos generales y variables */
+:root {
+    --color-primary: #BC7B43;
+    --color-secondary: #CE9C71;
+    --color-background: #EFDECF;
+    --color-container: #fff;
+
+    --color-dark: #1F2937;
+    --color-text-light: #6B7280;
+    --color-label: #ac9685;
+    --color-checkbox-label: #4B5563;
+
+    --color-border: #DFBD9F;
+    --color-border-bottom: #e5e7eb;
+
+    --color-logo: #865021;
+    --color-section-bg: #F9FAFB;
+    --color-checkbox-check: #ffffff;
+
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.2);
+    --color-section-shadow: rgba(0, 0, 0, 0.05);
+
+    --color-border-light: #ddd;
+    --color-border-lighter: #ccc;
+    --color-border-lightest: #eee;
+    --color-description: #DCAE94;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    word-break: break-word;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+hr {
+    width: 100%;
+    border-color: var(--color-border);
+    border-style: solid;
+}
+
+/* Contenedores reutilizables */
+.container {
+    background-color: var(--color-container);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    padding: 1.5rem;
+}
+
+.container-auto {
+    max-width: 25rem;
+    width: auto;
+}
+
+.container-width {
+    max-width: 62.5rem;
+    width: 100%;
+}
+
+/* Estilos del header y navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 62.5rem;
+    background-color: var(--color-container);
+    border-bottom: 1px solid var(--color-border-bottom);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    gap: 1rem;
+    position: sticky;
+    top: 1vh;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-logo);
+    gap: 0.5rem;
+}
+
+nav {
+    display: flex;
+    font-size: 1rem;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    float:right;
+    width:100%;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.header .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .user-profile img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9999px;
+}
+
+/* Estilos para subtítulos reutilizables */
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    gap: 1rem;
+    
+}
+
+.subtitle-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subtitle span {
+    font-weight: 400;
+}
+
+.subtitle a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Estilos de botones reutilizables */
+.primary-button,
+.secondary-button {
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary-button {
+    background-color: var(--color-primary);
+    color: var(--color-container);
+}
+
+.secondary-button {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    box-shadow: 0 4px 8px var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* Estado activo (al hacer click) */
+.primary-button:active,
+.secondary-button:active {
+    transform: translateY(2px);
+    /* baja 2px hacia abajo */
+    box-shadow: 0 2px 4px var(--shadow-hover);
+    /* sombra más pequeña */
+}
+
+/*!!!!!!!!!!!!!!!!!! COMPLETAR DESPUES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.flex-buttons {
+    display: flex;
+}
+
+/*Estilos para los iconos*/
+.icon-item {
+    width: 2.5rem;
+    height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.icon-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.delete-button {
+    color: red;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    color: #FF7777;
+}
+
+.edit-button, .view-button {
+    color: black;
+    cursor: pointer;
+}
+
+.edit-button:hover, .view-button:hover {
+    color: #666666;
+}
+
+.ph-trash:hover {
+    color: var(--color-checkbox-label);
+    cursor:pointer;
+}
+
+.section-table {
+    color: var(--color-dark);
+}
+
+/* Below header */
+/* Lo mismo que el header pero para moviles, en la parte de abajo de la GUI */ 
+.menu-item-inactive {
+    display:inline-block;
+}
+
+.expandable-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-dark);
+}
+
+.below-header {
+    display: none;
+    background-color: var(--color-section-bg);
+    padding: 1rem;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.below-header-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.below-header-items a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.below-header-items-first {
+    color: var(--color-section-bg);
+    background-color: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.table-ingredients{
+    width: 100%;
+    border: var(--color-border) solid 1px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table-ingredients th, 
+.table-ingredients td{
+    border-top: var(--color-border) solid 1px;
+    border-radius: 5%;
+    padding:1rem 0.5rem 1rem 0.5rem;
+}
+
+.table-ingredients th{
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+}
+
+.table-col-hides{
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+}
+
+.table-col-grupo {
+    width: 20%; /* Ajusta según necesidad */
+    text-align: left;
+}
+.table-ingredients td.table-items{
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .show-details {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    .expandable-menu-button {
+        display: block;
+    }
+    
+    .menu-item-inactive {
+        display: none;
+    }
+
+    .header {
+        z-index: 1000;
+        background-color: var(--color-container);
+    }
+    
+    nav a.menu-item-inactive {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header:hover nav a.menu-item-inactive,
+    .header:focus-within nav a.menu-item-inactive {
+        display: flex;
+    }
+
+    .show-details {
+        display: none;
+    }
+
+    .primary-button,
+    .secondary-button{
+        width:49%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        display: none;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .section {
+        padding: 0.5rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+   /*  .table-col-grupo {
+        display: none;
+    }
+
+    .table-col-origen {
+        display: none;
+    } */
+    
+    .show-details {
+        display: inline;
+    }
+
+    .below-header {
+        display: block;
+    }
+
+    .primary-button,
+    .secondary-button{
+        width:100%;
+        margin-top:0.5rem;
+    }
+}
+
+/*Estilos que se usan en Order pero que podrían ser reutilizados en otras partes de la aplicación*/
+
+/*User*/
+
+.order-user {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+    color: var(--color-label);
+}
+
+.order-avatar {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.order-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-name {
+    font-weight: 450;
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+.order-username {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+}
+
+/*Location*/
+
+.order-location {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+    color: var(--color-label);
+    padding: 1rem 0 1rem 0;
+    /*Cambie margin por padding*/
+}
+
+.order-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.order-location-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.order-location-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-address {
+    font-weight: 450;
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+/* Originalmente dentro de account.css pero usables en otras partes de la aplicación */
+
+.section {
+    background-color: var(--color-section-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 1px 2px var(--color-section-shadow);
+}
+
+.section h2 {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Este estilo en particular tmb esta repetido en order.css, y capaz en otros css tmb */
+.content {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0.05rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1 1 1; */
+    min-width: 0;
+    gap: 0.2rem;
+}
+
+.form-img {
+    display: block;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    /* display: block; */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-light);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    background-color: var(--color-container);
+    color: var(--color-dark);
+}
+
+/* Estilos para el contenedor de la imagen de vista previa */
+.image-preview {
+    flex: 1 1 0;
+    width: auto;
+    height: 9.375rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+/* Estilos para la imagen dentro de la vista previa */
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Estilos del checkbox cuando está marcado */
+input[type="checkbox"]:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/*Estilos para un checkbox estilo switch*/
+.switch-wrapper .switch {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 115.2px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 32px;
+    margin: 0;
+    position: relative;
+    width: 48px;
+    cursor: pointer;
+}
+
+.switch-wrapper .switch::before {
+    bottom: -9.6px;
+    content: "";
+    left: -9.6px;
+    position: absolute;
+    right: -9.6px;
+    top: -9.6px;
+}
+
+.switch-wrapper .switch,
+.switch-wrapper .switch::after {
+    transition: all 100ms ease-out;
+}
+
+.switch-wrapper .switch::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 22.4px;
+    left: 4.8px;
+    position: absolute;
+    top: 4.8px;
+    width: 22.4px;
+}
+
+.switch-wrapper .switch:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+}
+
+.switch-wrapper .switch:checked {
+    background-color: var(--color-primary);
+}
+
+.switch-wrapper .switch:checked::after {
+    background-color: #fff;
+    left: 20.8px;
+}
+
+.switch-wrapper :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.switch-wrapper .switch:checked:hover {
+    background-color: var(--color-logo);
+}

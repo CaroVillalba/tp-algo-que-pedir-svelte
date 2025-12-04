@@ -1,0 +1,333 @@
+.edit-plate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edit-plate-form .section {
+  margin: 0;
+}
+
+.edit-plate-form .form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 0;
+}
+
+.edit-plate-form .form-group {
+  flex: 1 1 0;
+  min-width: 0;
+  gap: 0.2rem;
+}
+
+.edit-plate-form .form-group input,
+.edit-plate-form .input-description {
+  font-size: 1rem;
+}
+
+.edit-plate-form .input-description {
+  height: 10rem;
+  resize: none;
+}
+
+.edit-plate-form .image-preview2 img {
+  flex: 1 1 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.edit-plate-form .image-preview2{
+  padding-top: 1rem;
+  height: 23rem;
+
+}
+
+.edit-plate-form h2 {
+  margin: 0;
+}
+
+.edit-plate-form .container-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-plate-form .checkbox-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.edit-plate-form .checkbox-form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-plate-form .checkbox-description {
+  color: var(--color-label);
+  font-weight: 400;
+}
+
+.edit-plate-form .switch-wrapper .switch::before,
+.edit-ingredient-form .switch-wrapper .switch::before {
+  content: none;
+}
+
+.edit-plate-form .prod-cost {
+  display: block;
+  padding-bottom: 1rem;
+}
+
+.edit-plate-form .container-button {
+  text-align: end;
+}
+
+/* Estilos base para la tabla */
+.edit-plate-form .section-table {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-section-bg);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 2px var(--color-section-shadow);
+}
+
+.edit-plate-form .table-ingredients {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: var(--color-container);
+}
+
+.edit-plate-form .table-ingredients th,
+.edit-plate-form .table-ingredients td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.edit-plate-form .table-ingredients th {
+  background-color: var(--color-section-bg);
+  font-weight: 600;
+}
+
+/* Definir anchos específicos para las columnas */
+.edit-plate-form .table-ingredients th:nth-child(1) {
+  width: 25%;
+}
+.edit-plate-form .table-ingredients th:nth-child(2) {
+  width: 15%;
+}
+.edit-plate-form .table-ingredients th:nth-child(3) {
+  width: 30%;
+}
+.edit-plate-form .table-ingredients th:nth-child(4) {
+  width: 15%;
+}
+.edit-plate-form .table-ingredients th:nth-child(5) {
+  width: 15%;
+}
+
+.edit-plate-form .table-ingredients th.table-col-origen,
+.edit-plate-form .table-ingredients th.table-col-acciones {
+  text-align: center;
+}
+
+.edit-plate-form .ph {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ingredient-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; 
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-section-bg);
+  border-radius: 0.5rem; 
+  box-shadow: inset 0 1px 2px var(--color-section-shadow);
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-section-bg);
+  color: var(--color-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 220px;
+
+  /* Flecha personalizada */
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'><polygon points='0,0 20,0 10,10' fill='%23444'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.6rem;
+}
+
+.select:hover {
+  border-color: var(--color-primary);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(100,150,250,0.2);
+}
+
+.tooltip {
+  color: var(--color-tooltip);
+}
+
+@media screen and (max-width: 768px) and (min-width: 401px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+
+  .checkbox-form-group input[type='checkbox'] {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .section-table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .table-ingredients {
+    min-width: auto;
+    width: 100%;
+  }
+
+  table {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+  }
+
+  /*Para mantener las palabras enteras*/
+  .table-ingredients td,
+  .table-ingredients th {
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+  .table-ingredients {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .ingredient-selector {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.4rem;
+  }
+
+  .select {
+    min-width: 100%;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .image-preview {
+    height: 15rem;
+  }
+
+  span {
+    display: none;
+  }
+
+  .container-button {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+  }
+  
+  .button {
+    padding: 0.3rem 1rem;
+    font-size: 0.87rem;
+  }
+
+  /* Contenedor desplazable */
+
+  .section-table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .table-ingredients {
+    min-width: auto;
+    width: 100%;
+  }
+
+  table {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+  }
+
+  /*Para mantener las palabras enteras*/
+  .table-ingredients td,
+  .table-ingredients th {
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+  .table-ingredients {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .ingredient-selector {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem;
+  }
+
+  .select {
+    min-width: 100%;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    background-position: right 0.3rem center;
+  }
+}
