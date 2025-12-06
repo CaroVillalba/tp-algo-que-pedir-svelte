@@ -49,3 +49,13 @@ Este proyecto me permitió:
 
 <img width="1255" height="763" alt="image" src="https://github.com/user-attachments/assets/795839f4-ff97-46e5-8883-1afb6a664522" />
 
+---
+
+## Equipo conformado por:
+- Lucía Arrieta
+- Valentino Salguero
+- Elias Serantes
+- Carolina Villalba
+- Ulises Zagare
+
+
