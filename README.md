@@ -46,3 +46,6 @@ Este proyecto me permitió:
 - Migrar una UI estática hacia un framework moderno  
 - Trabajar con componentes, props y reactividad en **Svelte**  
 - Comprender el flujo completo desde prototipo → desarrollo  
+
+<img width="1255" height="763" alt="image" src="https://github.com/user-attachments/assets/795839f4-ff97-46e5-8883-1afb6a664522" />
+
